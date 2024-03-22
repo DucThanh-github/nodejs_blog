@@ -1,1 +1,25 @@
-<h1>Views</h1>
+<div class="mt-4">
+  <div class="row">
+    {{#each course}}
+      <div class="col-sm-6 col-lg-4">
+        <div class="card mt-4 h-100">
+          <a href="/courses/{{this.slug}}">
+            <img
+              class="card-img-top"
+              src="{{this.image}}"
+              alt="Card image cap"
+            />
+          </a>
+          <div class="card-body">
+            <a href="/courses/{{this.slug}}">
+              <h5 class="card-title">{{this.name}}</h5>
+            </a>
+            <p class="card-text">{{this.description}}</p>
+            <a href="#" class="btn btn-primary">Thêm khóa học</a>
+          </div>
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+</div>
